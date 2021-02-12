@@ -1,2 +1,2 @@
 # Non-DeterministicFST
-A (basic basic) Python implementation of NFST parsing
+A (basic non-optimized) Python implementation of NFST parsing, done just for kicks.
