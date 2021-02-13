@@ -6,6 +6,6 @@ A quick'n dirty (*hacky*) Python implementation of NFST parsing, for educational
 **simpleNFST.pt** and **Pinyin2HinduArabicNumeralNFST.py** are example FSTs.
 
 ## To run:
-<cat nfstParser.py simpleNFST.pt > fst.py>
+`cat nfstParser.py simpleNFST.pt > fst.py`
 
-<python fst.py>
+`python fst.py`
