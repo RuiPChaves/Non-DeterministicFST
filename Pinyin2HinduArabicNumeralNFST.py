@@ -33,7 +33,7 @@ T = [ ('q0','er4','2','q1'),
       ('q0','bai3','100','q3'),
       ('q0','ling2','0','q3')]
 
-# Define input as token list
+# Define input as token list (Pinyin numbers correspond to tones)
 Input = ['jiu3','shi2','liu4']     
 
 # Run NFST
