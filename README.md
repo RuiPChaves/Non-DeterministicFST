@@ -1,5 +1,5 @@
 # Non-DeterministicFST
-A quick'n dirty (*hacky!*) Python implementation of NFST parsing, for educational purposes. NLTK does not offer FST support anymore for Python 3+, and extand FST implementations (that I am aware of) are non-trivial to install and use.
+A quick'n dirty (*hacky!*) Python implementation of NFST parsing, for educational purposes. NLTK does not offer FST support anymore for Python 3+, and extant Python FST implementations (that I am aware of) are non-trivial to install and use. 
 
 **nfstParser.py** contains the FST parser.
 
