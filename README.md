@@ -1,2 +1,2 @@
 # Non-DeterministicFST
-A (basic non-optimized) Python implementation of NFST parsing, done just for kicks and because the NLTK does not offer FST support anymore for Python 3+.
+A hacky Python implementation of NFST parsing, for educational purposes. NLTK does not offer FST support anymore for Python 3+, and extand FST implementations are non-trivial to instal and use.
