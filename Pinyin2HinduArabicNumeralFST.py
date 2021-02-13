@@ -1,5 +1,5 @@
 # ====================================================================
-# Define NFST (Pinyin numerals to Hindu-Arabic numerals; tokenized)
+# Define FST (Pinyin numerals to Hindu-Arabic numerals; tokenized)
 # ====================================================================
 
 #start state
@@ -33,8 +33,8 @@ T = [ ('q0','er4','2','q1'),
       ('q0','bai3','100','q3'),
       ('q0','ling2','0','q3')]
 
-# Define input as token list (Pinyin numbers correspond to tones)
+# Define input as token list (digits correspond to tones)
 Input = ['jiu3','shi2','liu4']     
 
-# Run NFST
+# Run FST
 tNFST(S,F,T,Input)
