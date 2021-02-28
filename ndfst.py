@@ -4,9 +4,7 @@
     Date created: 10/Feb/2021
     Python version: 3.6
 '''
-
 # NFST(startState,FinalStates,TransitionTable,InputToProcess)
-# =============================================================================================================
 def NFST(qS,F,T,Input):
     # Initialize search stack with dummy initial state transition (input and output slots will work as stacks)
     StepLoop = [['','','',qS]]
