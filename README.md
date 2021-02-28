@@ -3,9 +3,4 @@ A quick'n dirty (*hacky!*) Python implementation of (deterministic and non-deter
 
 **nfstParser.py** contains the FST parser.
 
-**simpleNFST.pt** and **Pinyin2HinduArabicNumeralFST.py** are example FSTs and their input.
-
-### To run:
-`cat nfstParser.py simpleNFST.pt > fst.py`
-
-`python fst.py`
+**Pinyin2HinduArabicNumeralFST.py** is an example FST.
