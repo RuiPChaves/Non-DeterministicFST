@@ -16,14 +16,14 @@ def NFST(qS,F,T,Input):
         OldListlen = len(StepLoop)
         for i in range(0,len(StepLoop)):       
          #Find all epsilon transitions
-            StepLoop.extend([(Cq,I,StepLoop[i][2]+O,Nq) for (Cq,I,O,Nq) in T if (Cq in StepLoop[i][3] and I == '' and (Cq,I,StepLoop[i][2]+O,Nq) not in StepLoop)])             
+            StepLoop.extend([(Cq,I,StepLoop[i][2]+O,Nq) for (Cq,I,O,Nq) in T if (Cq == StepLoop[i][3] and I == '' and (Cq,I,StepLoop[i][2]+O,Nq) not in StepLoop)])             
         if OldListlen == len(StepLoop):
             loop = False                                 
     # Scan input 
-    for j in Input:
+    for j in Inpu
         for i in range(0,len(StepLoop)):   
             # Extend temporary search list with accessible states and append prior input token and priot output token to current token                     
-            TStepLoop.extend([(Cq,StepLoop[i][1]+I,StepLoop[i][2]+O,Nq) for (Cq,I,O,Nq) in T if (Cq in StepLoop[i][3] and j == I)])                                           
+            TStepLoop.extend([(Cq,StepLoop[i][1]+I,StepLoop[i][2]+O,Nq) for (Cq,I,O,Nq) in T if (Cq == StepLoop[i][3] and j == I)])                                           
         # Promote temporary search list as new search list to loop over            
         StepLoop = TStepLoop  
         # Reinitialize temporary search list
@@ -34,7 +34,7 @@ def NFST(qS,F,T,Input):
             OldListlen = len(StepLoop)
             for i in range(0,len(StepLoop)):       
                 # Find all epsilon transitions
-                StepLoop.extend([(Cq,StepLoop[i][1],StepLoop[i][2]+O,Nq) for (Cq,I,O,Nq) in T if (Cq in StepLoop[i][3] and I == '' and (Cq,StepLoop[i][1],StepLoop[i][2]+O,Nq) not in StepLoop)])             
+                StepLoop.extend([(Cq,StepLoop[i][1],StepLoop[i][2]+O,Nq) for (Cq,I,O,Nq) in T if (Cq == StepLoop[i][3] and I == '' and (Cq,StepLoop[i][1],StepLoop[i][2]+O,Nq) not in StepLoop)])             
             if OldListlen == len(StepLoop):
                 loop = False                                           
     # Extract only the traversals that reached a final state and cover the entire input    
