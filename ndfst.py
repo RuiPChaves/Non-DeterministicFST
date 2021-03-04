@@ -34,17 +34,18 @@ def NFST(qS,F,T,Input):
             OldListlen = len(StepLoop)
             for i in range(0,len(StepLoop)):       
                 # Find all epsilon transitions
-                StepLoop.extend([(Cq,I,StepLoop[i][2]+O,Nq) for (Cq,I,O,Nq) in T if (Cq in StepLoop[i][3] and I == '' and (Cq,I,StepLoop[i][2]+O,Nq) not in StepLoop)])             
+                StepLoop.extend([(Cq,StepLoop[i][1],StepLoop[i][2]+O,Nq) for (Cq,I,O,Nq) in T if (Cq in StepLoop[i][3] and I == '' and (Cq,StepLoop[i][1],StepLoop[i][2]+O,Nq) not in StepLoop)])             
             if OldListlen == len(StepLoop):
                 loop = False                                           
-    # Extract only traversals that reached a final state
-    output = {s[2] for s  in StepLoop if s[3] in F}
+    # Extract only the traversals that reached a final state and cover the entire input    
+    output = {s[2] for s  in StepLoop if (s[3] in F and s[1] == ''.join(Input))}     
     return output
-# =============================================================================================================
 
 
-# Define FST (Pinyin numerals to Hindu-Arabic numerals; tokenized)
 # =============================================================================================================
+# Define a FST (Pinyin numerals to Hindu-Arabic numerals; tokenized)
+# =============================================================================================================
+
 #start state
 S = 'q0'
 
