@@ -127,6 +127,8 @@ T = [ ('q0','2','er4 ','q1'),
       ('q5','0','bai3','q3'),
       ('q5','','shi2','q3')]
 
+# Note: transitions into the terminal state write out extra space, in order to keep output tokenized
+
 # Define input as token list
 Input = ['4','2']     
 
